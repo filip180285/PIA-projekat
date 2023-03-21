@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "63e50e1279aabf0fb4dabb48"
+  },
+  "korisnik1": "filip",
+  "korisnik2": "ana",
+  "radionicaId": 1,
+  "radionicaNaziv": "Radionica crtanja",
+  "poruke": [
+    {
+      "autor": "filip",
+      "tekst": "Pozdrav, zainteresovan sam za ovu radionicu.Mozete li mi reci u koliko sati pocinje?",
+      "vreme": {
+        "$numberLong": "1675955730007"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Pozdrav Filipe, radionica pocinje u 14h i traje 3 sata.",
+      "vreme": {
+        "$numberLong": "1675956235080"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Vidimo see :)",
+      "vreme": {
+        "$numberLong": "1675956250803"
+      }
+    },
+    {
+      "autor": "filip",
+      "tekst": "Hvala na brzom odgovoru. Vidimo see",
+      "vreme": {
+        "$numberLong": "1675956549109"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e50f0779aabf0fb4dabb98"
+  },
+  "korisnik1": "gordana",
+  "korisnik2": "ana",
+  "radionicaId": 1,
+  "radionicaNaziv": "Radionica crtanja",
+  "poruke": [
+    {
+      "autor": "gordana",
+      "tekst": "Zdravo, da li materijal donosimo sami ili je obezbedjen?",
+      "vreme": {
+        "$numberLong": "1675955975576"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Zdravo, materijal je obezbedjen. Hvala na interesovanju :)",
+      "vreme": {
+        "$numberLong": "1675956305129"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Vidimo se sutraa",
+      "vreme": {
+        "$numberLong": "1675956312512"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e5247979aabf0fb4dabde8"
+  },
+  "korisnik1": "filip",
+  "korisnik2": "lazar",
+  "radionicaId": 2,
+  "radionicaNaziv": "Slikanje na staklu",
+  "poruke": [
+    {
+      "autor": "filip",
+      "tekst": "Zdravo, koliko traje ova radionica?",
+      "vreme": {
+        "$numberLong": "1675961465802"
+      }
+    },
+    {
+      "autor": "lazar",
+      "tekst": "Cao, radionica traje 4 sata.",
+      "vreme": {
+        "$numberLong": "1675962078576"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e5256479aabf0fb4dabe8a"
+  },
+  "korisnik1": "milica",
+  "korisnik2": "lazar",
+  "radionicaId": 2,
+  "radionicaNaziv": "Slikanje na staklu",
+  "poruke": [
+    {
+      "autor": "milica",
+      "tekst": "Pozdrav, da li ima pauza u toku trajanja radionice?",
+      "vreme": {
+        "$numberLong": "1675961700616"
+      }
+    },
+    {
+      "autor": "lazar",
+      "tekst": "Zdravo Milice, nakon 2 sata imamo pauzu od 20 minuta.",
+      "vreme": {
+        "$numberLong": "1675962122493"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e52b1a79aabf0fb4dabf88"
+  },
+  "korisnik1": "milan",
+  "korisnik2": "ana",
+  "radionicaId": 3,
+  "radionicaNaziv": "Mozaik",
+  "poruke": [
+    {
+      "autor": "milan",
+      "tekst": "Cao, da li mi donosimo materijal?",
+      "vreme": {
+        "$numberLong": "1675963162159"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Cao Milane, mi donosimo sve sto je potrebno za radionicu.",
+      "vreme": {
+        "$numberLong": "1675963325690"
+      }
+    },
+    {
+      "autor": "ana",
+      "tekst": "Hvala na interesovanju i prijavi :)",
+      "vreme": {
+        "$numberLong": "1675963357664"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e52f8b79aabf0fb4dac077"
+  },
+  "korisnik1": "milan",
+  "korisnik2": "lazar",
+  "radionicaId": 4,
+  "radionicaNaziv": "Dekupaz",
+  "poruke": [
+    {
+      "autor": "milan",
+      "tekst": "Zdravo, kojim linijama se najlakse dolazi do vase lokacije",
+      "vreme": {
+        "$numberLong": "1675964299808"
+      }
+    },
+    {
+      "autor": "lazar",
+      "tekst": "Milane, linije 36 i 37 staju preko puta zgrade u kojoj se odrzava radionica.",
+      "vreme": {
+        "$numberLong": "1675964510507"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e5300879aabf0fb4dac0a1"
+  },
+  "korisnik1": "milica",
+  "korisnik2": "lazar",
+  "radionicaId": 4,
+  "radionicaNaziv": "Dekupaz",
+  "poruke": [
+    {
+      "autor": "milica",
+      "tekst": "Pozdrav, da li je u planu slicna radionica u buducnosti? Nisam u mogucnosti da prisustvujem trenutnoj.",
+      "vreme": {
+        "$numberLong": "1675964424598"
+      }
+    },
+    {
+      "autor": "lazar",
+      "tekst": "Cao Milice, verovatno cemo nesto slicno organizovati ponovo u skorijem vremenskom intervalu.Pozdrav :)",
+      "vreme": {
+        "$numberLong": "1675964548576"
+      }
+    }
+  ]
+}]

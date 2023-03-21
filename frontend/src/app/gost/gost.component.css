@@ -1,0 +1,98 @@
+#meni {
+    background: linear-gradient(to right, white, #D5EEBB) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    font-size: x-large;
+    font-size: 1.3vw;
+}
+
+#meni a {
+    color: #5F7A61;
+    text-decoration: none;
+}
+
+#meni a:hover {
+    color: orangered;
+    font-weight: 500;
+}
+
+.meni-link {
+    padding-left: 3%;
+}
+
+.naslov {
+    font-style: italic;
+}
+
+.stil {
+    height: 300px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.slova {
+    font-size: large;
+}
+
+.slova2 {
+    font-size: x-large;
+    color: orangered;
+}
+
+.orangered {
+    color: orangered;
+}
+
+.searchBox {
+    background-image: url('../../assets/search.png');
+    background-size: 30px 30px;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#sort,
+#sort2 {
+    font-size: x-large;
+    padding: 0%;
+}
+
+#btnPretraga {
+    margin-top: 5px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+}
+
+#btnPretraga:hover {
+    margin-top: 5px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#dugme {
+    padding: 0%;
+}

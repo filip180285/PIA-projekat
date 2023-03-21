@@ -1,0 +1,252 @@
+<app-meni-organizator></app-meni-organizator>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>{{radionica.naziv}}</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12" id="dole" *ngIf="radionica.status == 'aktivna'">
+        <span id="ponistavanje">Ukoliko želite da izmenite radionicu, kliknite <a (click)=sacuvajRadionicu(radionica)
+                routerLink="../azuriranjeRadionice">OVDE</a></span>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil">
+        <br>
+        <span class="orangered">Organizator: </span>{{organizator.ime}} {{organizator.prezime}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Adresa: </span>{{radionica.adresa}}<br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        <span class="orangered">Preostalo mesta: </span>{{radionica.kapacitet}} <br>
+        <span class="orangered">Status: </span>{{radionica.status}}<br>
+        {{radionica.dugOpis}}
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Galerija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <div class="slike" *ngIf="radionica.slike.length > 0">
+            <div *ngFor="let slika of radionica.slike" class="sirina">
+                <img class="slika2" src="http://localhost:4000/workshops/getWorkshopImage/?image={{slika}}">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+
+<div class="row sredina">
+    <div class="col-sm-12 text-center">
+        <h3>Lokacija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center">
+        <div id="map">
+
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+
+<div class="row sredina" *ngIf="radionica.organizator == ulogovan.korisnickoIme">
+    <div class="col-sm-12 text-center">
+        <h3>Moja ćaskanja</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+
+    <div class="col-sm-12" *ngFor="let chat of chats">
+        <div class="text-center">
+            <span class="cetLink" (click)="toggleChat(chat)">{{chat.korisnik1}}</span>
+        </div>
+        <div class="cet" *ngIf="chat.show == true">
+            <div *ngFor="let poruka of chat.poruke">
+
+                <div class="kor1ime" *ngIf="poruka.autor == ulogovan.korisnickoIme">
+                    <b> Ja </b>, {{convertToDate(poruka.vreme).toLocaleString(['en-GB'], {year: 'numeric', month:
+                    'numeric', day:
+                    'numeric', hour: '2-digit', minute: '2-digit'})}}
+                </div>
+
+                <div class="inline" *ngIf="poruka.autor == ulogovan.korisnickoIme">
+                    <img class="rounded-circle slika"
+                        src="http://localhost:4000/users/getUserImage/?image={{ulogovan.slika}}"
+                        *ngIf="ulogovan.slika != ''">
+                    <img class="rounded-circle slika" src="../../assets/unknownuser.png" *ngIf="ulogovan.slika == ''">
+                </div>
+
+                <div class="kor1" *ngIf="poruka.autor == ulogovan.korisnickoIme">
+                    {{poruka.tekst}}
+                </div>
+
+                <div class="kor2ime" *ngIf="poruka.autor != ulogovan.korisnickoIme">
+                    <b> {{chat.korisnik1Objekat.ime}} </b>, {{convertToDate(poruka.vreme).toLocaleString(['en-GB'],
+                    {year: 'numeric', month: 'numeric', day:
+                    'numeric', hour: '2-digit', minute: '2-digit'})}}
+                </div>
+
+                <div class="kor2Wrapper" *ngIf="poruka.autor != ulogovan.korisnickoIme">
+                    <div class="kor2">
+                        {{poruka.tekst}}
+                    </div>
+                    <div class="inline">
+                        <img class="rounded-circle slika" *ngIf="chat.korisnik1Objekat.slika != ''"
+                            src="http://localhost:4000/users/getUserImage/?image={{chat.korisnik1Objekat.slika}}">
+                        <img class="rounded-circle slika" src="../../assets/unknownuser.png"
+                            *ngIf="chat.korisnik1Objekat.slika == ''">
+                    </div>
+                </div>
+            </div>
+            <hr class="black">
+            <div class="poruka">
+                Poruka: <input type="text" [(ngModel)]='chat.novaPoruka'> <button class="btn btn-secondary dugme"
+                    (click)="posaljiPoruku(chat)">Pošalji</button>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <hr>
+        </div>
+    </div>
+
+    <div *ngIf="chats.length == 0" class="col-sm-12 text-center slova2">
+        Nemate nijedno ćaskanje!
+    </div>
+    <div *ngIf="chats.length == 0" class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Svidjanja i komentari</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12">
+        <div class="likes">
+            <span class="bi bi-heart-fill srce crveno">
+                <span class="tooltiptext">
+                    <p *ngFor="let korisnik of radionica.svidjanja">
+                        {{map.get(korisnik).ime}} {{map.get(korisnik).prezime}}
+                    </p>
+                </span>
+            </span> {{radionica.svidjanja.length}}
+            <span class='bi bi-chat-right komentar'></span> {{radionica.komentari.length}}
+            <hr class="black">
+            <div *ngFor="let komentar of radionica.komentari">
+                <div class="kor1ime">
+                    <b> {{map.get(komentar.korisnik).ime}} </b>,
+                    {{convertToDate(komentar.vreme).toLocaleString(['en-GB'], {year: 'numeric', month:'numeric', day:
+                    'numeric', hour: '2-digit', minute: '2-digit'})}}
+                </div>
+                <div class="inline">
+                    <img class="rounded-circle slika"
+                        src="http://localhost:4000/users/getUserImage/?image={{(map.get(komentar.korisnik)).slika}}"
+                        *ngIf="(map.get(komentar.korisnik)).slika != ''">
+                    <img class="rounded-circle slika" src="../../assets/unknownuser.png"
+                        *ngIf="map.get(komentar.korisnik).slika == ''">
+                </div>
+                <div class="kor1">
+                    {{komentar.tekst}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row sredina" *ngIf="radionica.organizator == ulogovan.korisnickoIme">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Prijave</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina" *ngIf="radionica.organizator == ulogovan.korisnickoIme">
+    <div class="col-sm-8 offset-2 text-center"
+        *ngIf="radionica.prijavljeni.length > 0 && radionica.status == 'aktivna'">
+        <table class="table" id="tabela">
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Korisničko ime</th>
+            <th>Obriši prijavu</th>
+            <tr *ngFor="let korisnik of radionica.prijavljeni">
+                <td>{{map.get(korisnik).ime}}</td>
+                <td>{{map.get(korisnik).prezime}}</td>
+                <td>{{map.get(korisnik).korisnickoIme}}</td>
+                <td><a (click)="obrisiPrijavu(korisnik)">Obriši</a></td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="radionica.prijavljeni.length == 0" class="col-sm-12 text-center slova2">
+        Nema prijavljenih korisnika!
+    </div>
+    <div *ngIf="radionica.status != 'aktivna'" class="col-sm-12 text-center slova2">
+        Radionica nije aktuelna!
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina" *ngIf="radionica.organizator == ulogovan.korisnickoIme">
+    <div class="col-sm-12 text-center">
+        <h3>Dodatno</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-4 offset-4 text-center" *ngIf="radionica.status == 'aktivna'">
+        <button (click)="oznaciKrajRadionice()" class="btn btn-secondary dugmePrijava">Označi kraj</button>
+    </div>
+    <div class="col-sm-4 offset-4 text-center" *ngIf="radionica.status == 'aktivna'">
+        <button (click)="otkaziRadionicu()" class="btn btn-primary dugmePrijava">Otkaži</button>
+    </div>
+    <div class="col-sm-4 offset-4 text-center" *ngIf="!vecSkicirana()">
+        <button (click)="sacuvajSablonRadionice()" class="btn btn-primary dugmePrijava">Sačuvaj šablon</button>
+    </div>
+    <div *ngIf="radionica.status != 'aktivna' && vecSkicirana()" class="col-sm-12 text-center slova2">
+        Radionica nije više aktuelna i sačuvana je kao šablon!
+    </div>
+</div>

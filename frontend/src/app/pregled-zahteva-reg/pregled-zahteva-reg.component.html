@@ -1,0 +1,60 @@
+<app-meni-administrator></app-meni-administrator>
+
+<div class="row sredina">
+    <div class="col-sm-12 text-center">
+        <img class="rounded-circle velicina" src="http://localhost:4000/users/getUserImage/?image={{korisnik.slika}}"
+            *ngIf="korisnik.slika != ''">
+        <img class="rounded-circle velicina" src="../../assets/unknownuser.png" *ngIf="korisnik.slika == ''">
+    </div>
+</div>
+<div class="row sredina">
+    <div class="col-sm-8 offset-2 text-center">
+        <table class="table table-striped table-bordered" id="tabela">
+            <tr>
+                <td><b>Ime</b></td>
+                <td>{{korisnik.ime}}</td>
+            </tr>
+            <tr>
+                <td><b>Prezime</b></td>
+                <td>{{korisnik.prezime}}</td>
+            </tr>
+            <tr>
+                <td><b>Korisničko ime</b></td>
+                <td>{{korisnik.korisnickoIme}}</td>
+            </tr>
+            <tr>
+                <td><b>Tip</b></td>
+                <td>{{korisnik.tip}}</td>
+            </tr>
+            <tr>
+                <td><b>Telefon</b></td>
+                <td>{{korisnik.telefon}}</td>
+            </tr>
+            <tr>
+                <td><b>Mejl</b></td>
+                <td>{{korisnik.mejl}}</td>
+            </tr>
+            <tr *ngIf="korisnik.tip == 'organizator'">
+                <td><b>Naziv organizacije</b></td>
+                <td>{{korisnik.nazivOrganizacije}}</td>
+            </tr>
+            <tr *ngIf="korisnik.tip == 'organizator'">
+                <td><b>Adresa organizacije</b></td>
+                <td>{{korisnik.adresaOrganizacije}}</td>
+            </tr>
+            <tr *ngIf="korisnik.tip == 'organizator'">
+                <td><b>Maticni broj organizacije</b></td>
+                <td>{{korisnik.maticniBrojOrganizacije}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-3 offset-3 text-center">
+        <button id="btnPretraga" (click)="odbij()" class="btn btn-primary">Odbij zahtev</button>
+    </div>
+    <div class="col-sm-3 text-center">
+        <button id="btnPretraga2" (click)="prihvati()" class="btn btn-primary">Prihvati zahtev</button>
+    </div>
+</div>

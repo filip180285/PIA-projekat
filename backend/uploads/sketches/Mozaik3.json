@@ -1,0 +1,16 @@
+{
+  "naziv": "Mozaik",
+  "glavnaSlika": "3mozaikGlavna.png",
+  "datum": 1676160000000,
+  "mesto": "Novi Sad",
+  "adresa": "Radnicka 4, Novi Sad",
+  "kratakOpis": "Svima koji žele da naprave nešto predivno za svoj dom, baštu ili unikatan poklon za dragu osobu. Onima koji žele da nauče nov zanimljiv hobi koji će pozitivno uticati na oslobađanje sopstvene kreativnosti. Svima koji žele da iskažu svoje misli kroz umetnost u zanmljivom i prijateljskom okruženju.",
+  "dugOpis": "Mozaik je umetnost stvaranja slike sklapanjem malih delova obojenog stakla, kamena, ili drugih materijala. Najraniji poznati primeri mozaika izrađenih od različitih materijala su pronađeni u hramu u Mesopotamiji i potiču iz druge polovine trećeg milenijuma pne. Sastoje se od komadića kamenja, školjki i slonovače.\nMozaici iz 4. veka pne pronađeni su u makedonskoj palati Egae i oni se ukrasili podove helenističkih vila i rimskih kuća. Zapanjujući podovi od mozaika se mogu naći u rimskim vilama širom severne Afrike, u mestima kao što je Kartagina, i još uvek se može videti velika kolekcija u Bardo muzeju u Tunisu.Mozaik predstavlja jednu od najstarijih tehnika umetničkog izražavanja, a tajne izrade u ovoj tehnici su poznavali još stari Vavilonci, razvijali je Grci, unapređivali Rimljani, da bi se danas izučavao u celom svetu. Kroz sve vekove svog postojanja, mozaik je predstavljao jednu od najprestižnijih umetničkih rukotvorina. Zašto je ne biste naučili uz nas?",
+  "slike": [
+    "3mozaik-1.png",
+    "3mozaik-2.png",
+    "3mozaik-3.png",
+    "3mozaik-4.png",
+    "3mozaik-5.png"
+  ]
+}

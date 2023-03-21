@@ -1,0 +1,29 @@
+@import "~leaflet/dist/leaflet.css";
+
+hr {
+    background-color: white;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #444941, rgba(0, 0, 0, 0));
+}
+
+.baner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.baner a {
+    color: white;
+}
+
+.baner a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+.sredina {
+    background-color: #444941;
+    color: white;
+}

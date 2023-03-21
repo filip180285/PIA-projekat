@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-12" id="meni">
+        <a routerLink="../" class="meni-link">Početna</a>
+        <a routerLink="../top5" class="meni-link">Top 5 radionica</a>
+        <a routerLink="../login" class="meni-link">Prijava na sistem</a>
+        <a routerLink="../registracija" class="meni-link">Kreiraj nalog</a>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center boja">
+        <div class="forma1">
+            <h2>Poništavanje lozinke</h2>
+            <img src="../../assets/login.png">
+            <div class="forma-field">
+                <input type="text" id="korisnickoIme" placeholder="Mejl adresa..." name='mejl' [(ngModel)]='mejl'  >
+            </div>
+            <div class="forma-field">
+                <input type="text" id="lozinka" placeholder="Mejl adresa(ponovo)..." name='mejlPotvrda' [(ngModel)]='mejlPotvrda'>
+            </div>
+            <div class="forma-field">
+                <button id="loginBtn" (click)='posaljiZahtev()' class="btn btn-secondary">Pošalji zahtev</button>
+            </div>
+        </div>
+    </div>
+</div>

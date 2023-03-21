@@ -1,0 +1,27 @@
+<app-meni-ucesnik></app-meni-ucesnik>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center boja">
+        <form class="forma2">
+            <h2>Ažuriraj profil</h2>
+            <img src="../../assets/register.png">
+            <br><br>
+            <div class="form-field">
+                <input type="text" id="ime" placeholder="Ime..." name='ime' [(ngModel)]='ime'>
+            </div>
+            <div class="form-field">
+                <input type="text" id="prezime" placeholder="Prezime..." name='prezime' [(ngModel)]='prezime'>
+            </div>
+            <div class="form-field">
+                <input type="text" id="telefon" placeholder="Kontakt telefon(+381 xx xxxxxxx)..." name='telefon'
+                    [(ngModel)]='telefon'>
+            </div>
+            <div class="form-field">
+                <input type="file" id="slika" placeholder="Slika(opciono)..." name="image"
+                    (change)="selectImage($event)">
+            </div>
+            <button id="regBtn" (click)="azurirajKorisnika()" class="btn btn-secondary dugmeReg">Ažuriraj</button>
+            <br><br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<app-meni-ucesnik></app-meni-ucesnik>
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center boja">
+        <div class="forma1">
+            <h2>Uredi/obriši komentar</h2>
+            <img id="slika" src="../../assets/text-icon.png">
+            <div class="forma-field">
+                <textarea id="lozinka" rows="5" cols="5" placeholder="Unesi komentar..." name='lozinka'
+                    [(ngModel)]='komentar.tekst'></textarea>
+            </div>
+            <div class="forma-field">
+                <button id="loginBtn" class="btn btn-secondary" (click)='azurirajKomentar()'>Uredi</button>
+            </div>
+            <div class="forma-field">
+                <button id="loginBtn2" class="btn btn-secondary" (click)='obrisiKomentar()'>Obriši</button>
+            </div>
+        </div>
+    </div>
+</div>

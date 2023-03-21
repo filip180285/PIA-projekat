@@ -1,0 +1,71 @@
+<app-meni-organizator></app-meni-organizator>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <div class="col-sm-12 text-center">
+            <img class="rounded-circle velicina"
+                src="http://localhost:4000/users/getUserImage/?image={{ulogovan.slika}}" *ngIf="ulogovan.slika != ''">
+            <img class="rounded-circle velicina" src="../../assets/unknownuser.png" *ngIf="ulogovan.slika == ''">
+        </div>
+        <div class="col-sm-12 text-center">
+            <h2 class="naslov">Dobrodošli, {{ulogovan.ime}}</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12">
+        <h3>Moje radionice</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div *ngFor="let radionica of mojeRadionice" class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil" (click)="sacuvajRadionicu(radionica)">
+        <br>
+        <span class="orangered">Naziv: </span> {{radionica.naziv}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        {{radionica.kratakOpis}}
+        <hr>
+    </div>
+    <div *ngIf="mojeRadionice.length == 0" class="col-sm-12 text-center slova2">
+        Nemate nijednu radionicu!
+    </div>
+    <div *ngIf="mojeRadionice.length == 0" class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <h3>Ostale radionice</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div *ngFor="let radionica of ostaleRadionice" class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil" (click)="sacuvajRadionicu(radionica)">
+        <br>
+        <span class="orangered">Naziv: </span> {{radionica.naziv}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        {{radionica.kratakOpis}}
+        <hr>
+    </div>
+</div>

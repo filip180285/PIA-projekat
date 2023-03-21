@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-sm-12" id="meni">
+        <a routerLink="../" class="meni-link">Početna</a>
+        <a routerLink="../top5" class="meni-link">Top 5 radionica</a>
+        <a routerLink="../login" class="meni-link">Prijava na sistem</a>
+        <a routerLink="../registracija" class="meni-link">Kreiraj nalog</a>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12">
+        <h2 class="naslov">Aktuelne radionice</h2>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-3 offset-2 " id="sort">
+        <input type="text" id="myInputSearch" class="searchBox" placeholder="Pretraga po nazivu..." [(ngModel)]='naziv'>
+    </div>
+    <div class="col-sm-3" id="sort2">
+        <input type="text" id="myInputSearch2" class="searchBox" placeholder="Pretraga po mestu..." [(ngModel)]='mesto'>
+    </div>
+    <div class="col-sm-2" id="dugme">
+        <button id="btnPretraga" class="btn btn-primary" (click)="pretragaPoNazivuIMestu()">Pretraga</button>
+    </div>
+</div>
+
+<div class="row sredina text-center" *ngIf="pretrazeno == true && radionice.length > 0">
+    <div class="col-sm-12" id="sort">
+        <input type="radio" (change)="pozoviSort()" value="datum" id="datum" name="tip" checked [(ngModel)]='tip'> Datum
+        <input type="radio" (change)="pozoviSort()" value="naziv" id="naziv" name="tip" [(ngModel)]='tip'> Naziv
+        |||
+        <input type="radio" (change)="pozoviSort()" value="rastuce" name="nacinSorta" id="rastuce" name="kako" checked
+            [(ngModel)]='kako'> Rastuće
+        <input type="radio" (change)="pozoviSort()" value="opadajuce" name="nacinSorta" id="opadajuce" name="kako"
+            [(ngModel)]='kako'> Opadajuće
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div *ngFor="let radionica of radionice" class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil">
+        <br>
+        <span class="orangered">Naziv: </span> {{radionica.naziv}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        {{radionica.kratakOpis}}
+        <hr>
+    </div>
+    <div *ngIf="radionice.length == 0 && pretrazeno == true" class="col-sm-12 slova2">
+        Za unete parametre nema pronadjenih radionica!
+    </div>
+</div>

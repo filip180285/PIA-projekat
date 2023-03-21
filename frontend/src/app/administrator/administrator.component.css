@@ -1,0 +1,34 @@
+.naslov {
+    font-style: italic;
+}
+
+.velicina {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#tabela {
+    background-color: white;
+    color: black;
+}
+
+#ponistavanje a {
+    color: #5F7A61;
+    text-decoration: none;
+}
+
+#ponistavanje a:hover {
+    color: orangered;
+    font-weight: 500;
+}
+
+a {
+    color: #5F7A61;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: 500;
+}

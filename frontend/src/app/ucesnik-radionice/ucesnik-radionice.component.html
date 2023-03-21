@@ -1,0 +1,68 @@
+<app-meni-ucesnik></app-meni-ucesnik>
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Moje prijave</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-8 offset-2 text-center">
+        <table class="table" id="tabela" *ngIf="radionice.length > 0">
+            <th>Naziv</th>
+            <th>Mesto</th>
+            <th>Datum</th>
+            <th>Povuci prijavu</th>
+            <tr *ngFor="let radionica of radionice">
+                <td>{{radionica.naziv}}</td>
+                <td>{{radionica.mesto}}</td>
+                <td>{{convertToDate(radionica.datum).toLocaleString(['en-GB'], {year: 'numeric', month: 'numeric', day:
+                    'numeric'})}}</td>
+                <td>
+                    <a class="ponistavanje" (click)="povuciPrijavu(radionica)"
+                        *ngIf="provera12h(radionica.datum) == true">Povuci</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="radionice.length == 0" class="col-sm-12 text-center slova2">
+        Nemate prijava za radionice!
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <h3>Aktuelne radionice</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div *ngFor="let radionica of aktivneRadionice" class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil" (click)="sacuvajRadionicu(radionica)">
+        <br>
+        <span class="orangered">Naziv: </span> {{radionica.naziv}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        {{radionica.kratakOpis}}
+        <hr>
+    </div>
+
+    <div *ngIf="aktivneRadionice.length == 0" class="col-sm-12 text-center slova2">
+        Nema aktuelnih radionica!
+    </div>
+    <div *ngIf="aktivneRadionice.length == 0" class="col-sm-12">
+        <hr>
+    </div>
+
+</div>

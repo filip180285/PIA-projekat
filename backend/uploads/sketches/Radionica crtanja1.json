@@ -1,0 +1,16 @@
+{
+  "naziv": "Radionica crtanja",
+  "glavnaSlika": "1crtanjeGlavna.jpg",
+  "datum": 1675987200000,
+  "mesto": "Beograd",
+  "adresa": "Dunavski kej 19, Beograd",
+  "kratakOpis": "Naša škola crtanja i slikanja za odrasle je namenjena svima koji žele da se opuste, nauče osnovne slikarske tehnike i razviju svoju kreativnost. Polaznici imaju priliku da se upoznaju sa osnovama crtanja i slikanja, kao i da svoje znanje konstantno unapređuju.",
+  "dugOpis": "Mnogi se ne odlučuju za slikanje usled visoke cene materijala odnosno alata za slikanje. Ipak, naša škola slikanja za odrasle obezbeđuje sav potreban materijal za slikanje, pa ne morate razmišljati o tome kada se uputite kod nas.\nNa raspolaganju ćete imati sav alat koji koristimo, od profesionalnih četkica različite mekoće i veličine, preko vrhunskih olovaka i uglja, pa sve do platna i boja svih vrsta.\nPristup naših edukatora je takav da se slikarstvo za početnike može prilagoditi svakom početniku ponaosob. Sasvim je u redu da su različiti ljudi na različitom stepenu poznavanja tehnika crtanja ili slikanja, kao i to da nemaju prethodnog iskustva. Prema optimalnom planu realizacije programa – garantovana je posvećenost naših umetnika-edukatora, koji će vas voditi kroz kreativni, stilski i tehnički proces slikarstva i crtanja.",
+  "slike": [
+    "1crtanje-1.jpg",
+    "1crtanje-2.jpg",
+    "1crtanje-3.jpg",
+    "1crtanje-4.jpg",
+    "1crtanje-5.jpg"
+  ]
+}

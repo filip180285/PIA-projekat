@@ -1,0 +1,17 @@
+#heder {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right,white,#D5EEBB);
+}
+
+#naslov {
+    color: #5F7161;
+    font-family: 'Satisfy', cursive;
+    padding-top: 30px;
+}
+
+#logo {
+    width: 150px;
+    height: 80px;
+    margin-top: 30px;
+}

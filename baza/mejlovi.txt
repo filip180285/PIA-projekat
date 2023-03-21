@@ -1,0 +1,101 @@
+*******************************************************
+
+jovicaperic84@gmail.com		-jovicadobrica
+
+jovicana36@gmail.com		-anajovic123
+
+lazzarmikic@gmail.com		-lazarmikic123
+
+filipkojic48@gmail.com		-
+
+gordanasek@gmail.com		-
+
+mjokic324@gmail.com		-milanjokic123
+
+milpetrovic22@gmail.com		-milicapetrovic123
+
+simicp393@gmail.com		-petarsimic123
+
+*************************************************************
+
+backend:
+
+npm install nodemailer
+
+npm i multer
+
+nom i @types/multer --save-dev
+
+npm install image-size --save
+
+frontend:
+
+https://www.ultimateakash.com/blog-details/Ii1DQGAKYAo=/How-To-Integrate-Leaflet-Maps-in-Angular-2022
+
+npm install leaflet @asymmetrik/ngx-leaflet --force
+
+npm install --save-dev @types/leaflet
+
+
+5.Open src/styles.css and import leaflet.css
+
+@import "~leaflet/dist/leaflet.css";
+
+6.Open app.module.ts and import LeafletModule
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    LeafletModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+7.Open angular.json and update assets.
+
+...
+"architect": {
+    "build": {
+      "builder": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/angular-leaflet-maps",
+        "index": "src/index.html",
+        "main": "src/main.ts",
+        "polyfills": "src/polyfills.ts",
+        "tsConfig": "tsconfig.app.json",
+        "assets": [
+          "src/favicon.ico",
+          "src/assets",
+          {
+            "glob": "**/*",
+            "input": "./node_modules/leaflet/dist/images",
+            "output": "assets/"
+          }
+        ],
+		
+8.tsconfig.json
+https://stackoverflow.com/questions/74616687/error-ts2707-generic-type-%C9%B5%C9%B5directivedeclaration-requires-between-6-and-8-type
+{
+    ...
+    complilerOptions: {
+        ...
+        "skipLibCheck": true
+    }
+}
+
+C:\Users\Korisnik\Desktop\PIA-projekat>mongo skripta.js
+
+https://unpkg.com/browse/leaflet@1.9.3/dist/images/
+
+

@@ -1,0 +1,86 @@
+<app-meni-administrator></app-meni-administrator>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>{{radionica.naziv}}</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12" id="dole">
+        <span id="ponistavanje">Ukoliko želite da izmenite radionicu, kliknite <a (click)=sacuvajRadionicu(radionica)
+                routerLink="../azuriranjeRadionice">OVDE</a></span>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{radionica.glavnaSlika}}"
+            class="rounded stil">
+        <br>
+        <span class="orangered">Organizator: </span>{{organizator.ime}} {{organizator.prezime}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{radionica.mesto}} <br>
+        <span class="orangered">Adresa: </span>{{radionica.adresa}}<br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(radionica.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        {{radionica.dugOpis}}
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Galerija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <div class="slike" *ngIf="radionica.slike.length > 0">
+            <div *ngFor="let slika of radionica.slike" class="sirina">
+                <img class="slika2" src="http://localhost:4000/workshops/getWorkshopImage/?image={{slika}}">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Lokacija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center">
+        <div id="map">
+
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-4 offset-4 text-center">
+        <button (click)="obrisiRadionicu()" class="btn btn-secondary dugmePrijava">Obriši radionicu</button>
+    </div>
+</div>

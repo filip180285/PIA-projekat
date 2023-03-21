@@ -1,0 +1,40 @@
+<app-meni-organizator *ngIf="ulogovan.tip == 'organizator'"></app-meni-organizator>
+<app-meni-administrator *ngIf="ulogovan.tip == 'administrator'"></app-meni-administrator>
+
+<div class="row sredina">
+  <div class="col-sm-6 offset-3 text-center boja">
+    <div class="forma1">
+      <h2>Ažuriraj radionicu</h2>
+      <img id="slika" src="../../assets/artwork.png">
+      <div class="forma-field">
+        <input type="text" id="naziv" placeholder="Naziv radionice..." [(ngModel)]='naziv' name='naziv'>
+      </div>
+      <div class="forma-field">
+        <input type="text" id="mesto" placeholder="Mesto održavanja..." [(ngModel)]='mesto' name='mesto'>
+      </div>
+      <div class="forma-field">
+        <input type="text" id="adresa" placeholder="Adresa održavanja..." [(ngModel)]='adresa' name='adresa'>
+      </div>
+      <div class="forma-field">
+        <input type="date" id="datum" min="2023-02-22" max="2023-03-22" [(ngModel)]='datum' name='datum'>
+      </div>
+      <div class="forma-field">
+        <textarea id="kratakOpis" rows="5" cols="5" placeholder="Kratak opis..." [(ngModel)]='kratakOpis'
+          name='kratakOpis'></textarea>
+      </div>
+      <div class="forma-field">
+        <textarea id="dugOpis" rows="5" cols="5" placeholder="Duži opis..." [(ngModel)]='dugOpis'
+          name='dugOpis'></textarea>
+      </div>
+      <div class="forma-field">
+        <input type="file" id="glavnaSlika" name="glavnaSlika" (change)="selectImage($event)" />
+      </div>
+      <div class="forma-field">
+        <input type="file" id="galerija" name="galerija" multiple (change)="selectMultipleImage($event)" />
+      </div>
+      <div class="forma-field">
+        <button id="loginBtn" class="btn btn-secondary" (click)='azurirajRadionicu()'>Ažuriraj</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,271 @@
+.slova {
+    font-size: larger;
+}
+
+.slova2 {
+    font-size: x-large;
+    color: orangered;
+}
+
+#tabela {
+    background-color: white;
+    margin-top: 30px;
+}
+
+#tabela a {
+    color: #5F7A61;
+    text-decoration: none;
+}
+
+#tabela a:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+#map{
+    width: 100%;
+    height: 400px;
+}
+
+.slike {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sirina {
+    width: 18%;
+}
+
+.slika2 {
+    width: 100%;
+}
+
+.orangered {
+    color: orangered;
+}
+
+.stil {
+    height: 300px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.dugmePrijava {
+    outline: none;
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dugmePrijava:hover {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+#dole{
+    margin-bottom: 10px;
+}
+
+#ponistavanje a {
+    color: #5F7A61;
+    text-decoration: none;
+}
+
+#ponistavanje a:hover {
+    color: orangered;
+    font-weight: 500;
+}
+
+.cet {
+    width: 60%;
+    background-color: #D5EEBB;
+    margin: auto;
+    color: black;
+    border: 3px solid black;
+    font-size: medium;
+    /*mozda ukloniti*/
+   /* overflow-y: scroll; 
+    height:400px;*/
+}
+
+
+
+.cetLink{
+    color: #48a77f;
+    font-size: x-large;
+    width: 100%;
+    text-align: center;
+}
+
+.cetLink:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+.kor1ime {
+    text-align: left;
+    padding: 10px;
+    margin-left: 80px;
+}
+
+.kor2ime {
+    text-align: right;
+    padding: 10px;
+    margin-right: 25%;
+}
+
+.kor1 {
+    border-radius: 25px;
+    border: 3px solid lightgray;
+    background-color: #48a77f;
+    ;
+    width: 40%;
+    padding: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.kor2Wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.kor2 {
+    border-radius: 25px;
+    border: 3px solid lightgray;
+    background-color: palevioletred;
+    width: 40%;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slika {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+.black{
+    background-color: black;
+    height: 2px;
+    width: 100%;
+}
+
+.poruka{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+input[type = 'text'] {
+    width: 60%;
+}
+
+.dugme {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dugme:hover{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.likes {
+    width: 60%;
+    background-color: #D5EEBB;
+    margin: auto;
+    color: black;
+    border: 3px solid black;
+    font-size: medium;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.srce {
+    font-size: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.srce {
+    position: relative;
+    display: inline-block;
+}
+
+.srce .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    font-size: small;
+    background-color: #48a77f;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 100%;
+}
+
+.srce:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltiptext:hover .srce {
+    visibility: visible;
+}
+
+.crveno {
+    color: orangered
+}
+.komentar {
+    color: black;
+    font-size: 50px;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,24 @@
+<app-meni-ucesnik *ngIf="ulogovan.tip == 'ucesnik'"></app-meni-ucesnik>
+<app-meni-organizator *ngIf="ulogovan.tip == 'organizator'"></app-meni-organizator>
+<app-meni-administrator *ngIf="ulogovan.tip == 'administrator'"></app-meni-administrator>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center boja">
+        <div class="forma1">
+            <h2>Promena lozinke</h2>
+            <img src="../../assets/login.png">
+            <div class="forma-field">
+                <input type="password" id="korisnickoIme" placeholder="Trenutna lozinka..." name='trenutnaLozinka' [(ngModel)]='trenutnaLozinka' >
+            </div>
+            <div class="forma-field">
+                <input type="password" id="lozinka" placeholder="Nova lozinka..." name='novaLozinka1' [(ngModel)]='novaLozinka1' >
+            </div>
+            <div class="forma-field">
+                <input type="password" id="lozinka2" placeholder="Nova lozinka(ponovo)..." name='novaLozinka2' [(ngModel)]='novaLozinka2' >
+            </div>
+            <div class="forma-field">
+                <button id="loginBtn" (click) = "promenaLozinke()" class="btn btn-secondary">Promeni lozinku</button>
+            </div>
+        </div>
+    </div>
+</div>

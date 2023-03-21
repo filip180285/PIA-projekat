@@ -1,0 +1,288 @@
+.slova2 {
+    font-size: large;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.slike {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sirina {
+    width: 18%;
+}
+
+.slika2 {
+    width: 100%;
+}
+
+.orangered {
+    color: orangered;
+}
+
+.stil {
+    height: 300px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+#btnPretraga,
+#btnPretraga2 {
+    margin-top: 5px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+}
+
+.dugmePrijava {
+    outline: none;
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dugmePrijava:hover {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.slova {
+    font-size: larger;
+}
+
+
+.cet {
+    width: 60%;
+    background-color: #D5EEBB;
+    margin: auto;
+    color: black;
+    border: 3px solid black;
+    font-size: medium;
+}
+
+.kor1ime {
+    text-align: left;
+    padding: 10px;
+    margin-left: 80px;
+}
+
+.kor2ime {
+    text-align: right;
+    padding: 10px;
+    margin-right: 25%;
+}
+
+.kor1 {
+    border-radius: 25px;
+    border: 3px solid lightgray;
+    background-color: #48a77f;
+    ;
+    width: 40%;
+    padding: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.kor2Wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.kor2 {
+    border-radius: 25px;
+    border: 3px solid lightgray;
+    background-color: palevioletred;
+    width: 40%;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slika {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+.black {
+    background-color: black;
+    height: 2px;
+    width: 100%;
+}
+
+input[type='text'] {
+    width: 60%;
+}
+
+#pos {
+    width: 10%;
+    margin-left: 5%;
+}
+
+.centriraj {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.poruka {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.dugme {
+    outline: none;
+    font-size: small;
+    border: none;
+    cursor: pointer;
+    margin-left: 5%;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dugme:hover {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.likes {
+    width: 60%;
+    background-color: #D5EEBB;
+    margin: auto;
+    color: black;
+    border: 3px solid black;
+    font-size: medium;
+}
+
+
+.srce {
+    font-size: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.crveno {
+    color: orangered
+}
+
+.belo {
+    color: white
+}
+
+
+.komentar {
+    color: black;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.srce {
+    position: relative;
+    display: inline-block;
+}
+
+.srce .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    font-size: small;
+    background-color: #48a77f;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 100%;
+}
+
+.srce:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltiptext:hover .srce {
+    visibility: visible;
+}
+
+.dugmeKom {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10%;
+    display: inline-block;
+    text-align: center;
+    background-color: #7FC8A9;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.dugmeKom:hover {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color: #48a77f;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.porukaKom {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}

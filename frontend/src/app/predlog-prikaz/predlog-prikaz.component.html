@@ -1,0 +1,85 @@
+<app-meni-administrator></app-meni-administrator>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>{{predlog.naziv}}</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina text-center">
+    <div class="col-sm-12 slova">
+        <img src="http://localhost:4000/workshops/getWorkshopImage/?image={{predlog.glavnaSlika}}" class="rounded stil">
+        <br>
+        <span class="orangered">Organizator: </span>{{korisnik.ime}} {{korisnik.prezime}}<br>
+        <span class="orangered">Mesto održavanja: </span>{{predlog.mesto}} <br>
+        <span class="orangered">Adresa: </span>{{predlog.adresa}}<br>
+        <span class="orangered">Datum održavanja: </span> {{convertToDate(predlog.datum).toLocaleString(['en-GB'],
+        {year: 'numeric', month: 'numeric', day: 'numeric'})}}
+        <br>
+        <span class="orangered">Broj mesta: </span> {{predlog.kapacitet}}<br>
+        {{predlog.dugOpis}}
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Galerija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <div class="slike" *ngIf="predlog.slike.length > 0">
+            <div *ngFor="let slika of predlog.slike" class="sirina">
+                <img class="slika2" src="http://localhost:4000/workshops/getWorkshopImage/?image={{slika}}">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-12">
+        <hr>
+    </div>
+    <div class="col-sm-12 text-center">
+        <h3>Lokacija</h3>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-6 offset-3 text-center">
+        <div id="map">
+
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row sredina">
+    <div class="col-sm-4 offset-4 text-center">
+        <button (click)="odobriPredlog()" class="btn btn-secondary dugmePrijava">Odobri predlog</button>
+    </div>
+    <div class="col-sm-4 offset-4 text-center">
+        <button (click)="odbijPredlog()" class="btn btn-primary dugmePrijava">Odbij predlog</button>
+    </div>
+</div>
